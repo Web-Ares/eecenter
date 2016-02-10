@@ -29,14 +29,6 @@
 }
 /* --------------- /placeholder --------------- */
 
-/* --------------- fonts --------------- */
-@font-face {
-    font-family: "Font Name";
-    src: url("../fonts/font.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-/* --------------- /fonts --------------- */
 
 /* --------------- site --------------- */
 .site {
@@ -44,6 +36,7 @@
     min-width: 1000px;
     overflow: hidden;
     position: relative;
+    font-family: Trebuchet, sans-serif;
     z-index: 1;
 }
 .site:after {
