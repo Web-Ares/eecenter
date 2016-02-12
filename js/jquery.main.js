@@ -12,6 +12,11 @@ $(function(){
         ArticlesTabs($(this));
     });
 
+    $('.aside__info').each(function() {
+        Menu($(this));
+    });
+
+
     var myMap;
 
     function init () {
@@ -74,6 +79,65 @@ var Tabs = function(obj) {
             });
         },
         _init = function() {
+            _addEvents();
+        };
+
+    //public properties
+
+    //public methods
+
+    _init();
+};
+
+var Menu = function(obj) {
+
+    //private properties
+    var _obj = $(this),
+        _items=$('.aside__info>li');
+
+
+    //private methods
+    var _addEvents = function() {
+
+
+            _items.on({
+                click: function(){
+                    var curElem = $(this),
+                        curMenu= curElem.find('ul');
+
+                    if(curMenu.is(':visible')){
+                        curMenu.slideUp(300);
+                    }
+                    else{
+                        curMenu.slideDown(300);
+                    }
+                    if (event.stopPropagation) {
+                        event.stopPropagation();
+                    } else {
+                        event.cancelBubble = true;
+                    }
+                }
+            });
+
+            $('body').on({
+
+                click: function(e){
+
+                    var elem=$(e.target);
+
+                    var curElem = $('.aside__info>li'),
+                        curMenu= curElem.find('ul');
+
+                    if(curMenu.is(':visible')){
+                        curMenu.slideUp(300);
+                    }
+                }
+            });
+
+        },
+        _init = function() {
+
+
             _addEvents();
         };
 

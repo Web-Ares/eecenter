@@ -396,6 +396,10 @@
 .site__content-layout .aside__info{
     display: block;
     position: relative;
+
+}
+.site__content-layout .aside__info a{
+    text-decoration: none;
     color: #fff;
     font-size: 14px;
     padding: 0;
@@ -422,6 +426,7 @@
     content: none;
 }
 .site__content-layout .aside__info ul{
+    display: none;
     margin: 0;
 }
 .site__content-layout .aside__info ul li{
